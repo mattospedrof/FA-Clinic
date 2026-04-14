@@ -4,7 +4,7 @@ Sistema de gestão de clínicas médicas hospedado no Vercel.
 
 ## 🌐 Landing Page
 
-Acesse a página de apresentação: [FA Clinic](https://seu-dominio.vercel.app/apresentation)
+Acesse a página de apresentação: [FA Clinic](https://fa-clinic.vercel.app/apresentation)
 
 ## Stack
 
