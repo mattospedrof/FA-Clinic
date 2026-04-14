@@ -22,6 +22,12 @@ export function DataTable({
   itemsPerPage = 25,
   highlightOnHover = false,
 }: DataTableProps) {
+  // Paginação client-side (useState ANTES de qualquer return)
+  const [currentPage, setCurrentPage] = useState(1)
+  const totalPages = Math.ceil(data.length / itemsPerPage)
+  const startIdx = (currentPage - 1) * itemsPerPage
+  const paginatedData = data.slice(startIdx, startIdx + itemsPerPage)
+
   if (loading) {
     return (
       <div className="bg-white rounded-xl shadow overflow-hidden" role="status" aria-label="Carregando dados">
@@ -37,12 +43,6 @@ export function DataTable({
       </div>
     )
   }
-
-  // Paginação client-side
-  const totalPages = Math.ceil(data.length / itemsPerPage)
-  const [currentPage, setCurrentPage] = useState(1)
-  const startIdx = (currentPage - 1) * itemsPerPage
-  const paginatedData = data.slice(startIdx, startIdx + itemsPerPage)
 
   return (
     <>

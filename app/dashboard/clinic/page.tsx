@@ -19,7 +19,7 @@ export default function ClinicDashboard() {
 
   const loadMetrics = async () => {
     let apptQuery = supabase.from('appointments').select('*')
-    let patientQuery = supabase.from('patients').select('*')
+    const patientQuery = supabase.from('patients').select('*')
 
     // Aplicar filtros de data
     if (filters.startDate) {
