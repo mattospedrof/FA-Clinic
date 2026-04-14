@@ -17,9 +17,9 @@ next-env.d.ts
 # TypeScript
 *.tsbuildinfo
 
-# Supabase
-.supabase/
-supabase/
+# Supabase (apenas na raiz)
+/.supabase/
+/supabase/
 
 # Qwen
 .qwen/
