@@ -18,8 +18,6 @@ export default function StaffDashboard() {
   const [formError, setFormError] = useState('')
   const supabase = createClient()
 
-  useEffect(() => { load() }, [])
-
   const load = async () => {
     const { data: appts } = await supabase.from('appointments').select('*, patients(full_name), clinics(name)').order('date', { ascending: true }).limit(50)
     const { data: pats } = await supabase.from('patients').select('*').limit(50)
@@ -27,6 +25,8 @@ export default function StaffDashboard() {
     setPatients(pats || [])
     setLoading(false)
   }
+
+  useEffect(() => { load() }, [])
 
   const handleCepBlur = async () => {
     if (patientData.cep?.length === 8) {
