@@ -96,4 +96,4 @@ Franco_Clinic/
 
 ---
 
-Projeto desenvolvido por **Francisco** — FA Clinic 2026
+Projeto desenvolvido por **Frannkz Tech** — FA Clinic 2026
